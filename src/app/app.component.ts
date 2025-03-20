@@ -14,6 +14,7 @@ import { SwitchcontrolComponent } from './switchcontrol/switchcontrol.component'
 import { ForloopcontrolComponent } from './forloopcontrol/forloopcontrol.component';
 import { SignalsComponent } from './signals/signals.component';
 import { SignalsdatatypesComponent } from './signalsdatatypes/signalsdatatypes.component';
+import { ComputedComponent } from './computed/computed.component';
 
 
 @Component({
@@ -21,7 +22,7 @@ import { SignalsdatatypesComponent } from './signalsdatatypes/signalsdatatypes.c
   imports: [NgFor, DatatableComponent, RouterOutlet, LoginComponent, SignupComponent
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
-],
+, ComputedComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
