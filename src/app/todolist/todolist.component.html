@@ -4,7 +4,11 @@
 <button (click)="addTask()">Add task</button>
 
 @for(item of taskList; track item.id){
-    <p>{{item.name}}</p>
+    <div>
+        <span>{{item.name}}</span>
+    <button (click)="deleteTask(item.id)">Delete</button>
+    </div>
+    
 }
 
 @empty() {

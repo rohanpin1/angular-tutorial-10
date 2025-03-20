@@ -12,5 +12,10 @@ export class TodolistComponent {
 
   addTask(){
     this.taskList.push({id : crypto.randomUUID(), name : this.task})
+    this.task = ''
+  }
+
+  deleteTask(id:string){
+    this.taskList = this.taskList.filter((x)=> x.id != id)
   }
 }
