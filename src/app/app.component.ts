@@ -19,6 +19,7 @@ import { ForloopcontextialComponent } from './forloopcontextial/forloopcontextia
 import { TwowaybindComponent } from './twowaybind/twowaybind.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 @Component({
@@ -27,7 +28,7 @@ import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.compo
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
-DynamicStylingComponent],
+DynamicStylingComponent, DirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

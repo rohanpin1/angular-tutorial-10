@@ -1,0 +1,51 @@
+<p>directives works!</p>
+
+
+<h1 *ngIf="show">Heading Tag</h1>
+
+<ul>
+    ng For directives:-
+    <li *ngFor="let x of users">
+        {{x}}
+    </li>
+</ul>
+
+<ul>
+    Students name:-
+    <li *ngFor="let x of students">
+        {{x.name}}
+    </li>
+</ul>
+
+<div>
+    ngIf with multiple coditions
+</div>
+
+<h1 *ngIf="isDisplay">Rohan kumawat</h1>
+
+
+<button *ngIf="login else elseBlock">Logout</button>
+<ng-template #elseBlock>
+    <button>Login</button>
+</ng-template>
+
+
+ngSwitch Directives
+
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">green</button>
+<button (click)="changeColor('blue')">blue</button>
+<button (click)="changeColor('yellow')">yellow</button>
+<button (click)="changeColor('skyblue')">skyblue</button>
+<button (click)="changeColor('blueviolet')">blueviolet</button>
+<button (click)="changeColor('default')">default</button>
+<div [ngSwitch]="color">
+
+    <h1 *ngSwitchCase="'red'" style="background-color: red;" >Rohan</h1>
+    <h1 *ngSwitchCase="'green'"  style="background-color: green;">Rohan</h1>
+    <h1 *ngSwitchCase="'blue'"  style="background-color: blue;">Rohan</h1>
+    <h1 *ngSwitchCase="'yellow'"  style="background-color: yellow;">Rohan</h1>
+    <h1 *ngSwitchCase="'skyblue'"  style="background-color: skyblue;">Rohan</h1>
+    <h1 *ngSwitchCase="'blueviolet'"  style="background-color: blueviolet;">Rohan</h1>
+    <h1 *ngSwitchDefault  style="background-color: black; color: white;">Rohan</h1>
+</div>
