@@ -18,6 +18,7 @@ import { EffecttutorialComponent } from './effecttutorial/effecttutorial.compone
 import { ForloopcontextialComponent } from './forloopcontextial/forloopcontextial.component';
 import { TwowaybindComponent } from './twowaybind/twowaybind.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.component';
 
 
 @Component({
@@ -25,7 +26,8 @@ import { TodolistComponent } from './todolist/todolist.component';
   imports: [NgFor, DatatableComponent, LoginComponent, SignupComponent
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
-, ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent],
+, ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
+DynamicStylingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -37,14 +39,7 @@ export class AppComponent {
   ];
   formHeader = 'Registration form';
 
-  handleClickEvent(){
-    alert("hi")
-    this.otherFunction()
-  }
-
-  otherFunction(){
-    console.log("other function")
-  }
+  
 }
 
 

@@ -1,0 +1,11 @@
+<p>dynamic-styling works!</p>
+
+@if(isDynamic){
+
+    <h1 [style.backgroundColor]="bgColor" [style.fontSize.pt]="fontSize">Rohan</h1>
+}
+@else {
+    <h1>Rohan</h1>
+}
+
+<button (click)="dynamicStyle()">Dynamic Styling</button>
