@@ -16,6 +16,7 @@ import { SignalsdatatypesComponent } from './signalsdatatypes/signalsdatatypes.c
 import { ComputedComponent } from './computed/computed.component';
 import { EffecttutorialComponent } from './effecttutorial/effecttutorial.component';
 import { ForloopcontextialComponent } from './forloopcontextial/forloopcontextial.component';
+import { TwowaybindComponent } from './twowaybind/twowaybind.component';
 
 
 @Component({
@@ -23,7 +24,7 @@ import { ForloopcontextialComponent } from './forloopcontextial/forloopcontextia
   imports: [NgFor, DatatableComponent, LoginComponent, SignupComponent
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
-, ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent],
+, ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

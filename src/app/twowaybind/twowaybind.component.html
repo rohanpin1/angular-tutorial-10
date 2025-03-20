@@ -1,0 +1,8 @@
+<p>twowaybind works!</p>
+
+<input type="text" [(ngModel)]="name">   <!--this is best way for two way binding-->
+
+<h1>{{name}}</h1>
+
+
+<input type="text" (input)="updateNmae($event)" placeholder="enter hyour name">   <!--this is time consuming-->
