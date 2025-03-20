@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 export class ForloopcontrolComponent {
   users = ["Rohan", "Harshita", "Parul", "Rajendra", "Anita"]
   students = [
-    {name : 'rohan', email : 'rohan@gmail.com'},
-    {name : 'parul', email : 'parul@gmail.com'},
-    {name : 'harshita', email : 'harshita@gmail.com'},
+    {id : crypto.randomUUID(),name : 'rohan', email : 'rohan@gmail.com'},
+    {id : crypto.randomUUID(),name : 'parul', email : 'parul@gmail.com'},
+    {id : crypto.randomUUID(),name : 'harshita', email : 'harshita@gmail.com'},
   ]
 }

@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @for(student of students; track students){
+        @for(student of students; track student.id){
             <tr>
                 <td>{{student.name}}</td>
                 <td>{{student.email}}</td>

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { DatatableComponent } from "./feature/datatable.component"; // ✅ Import NgFor
-import { RouterOutlet } from '@angular/router';
-import {routes} from './app.routes'
+
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -15,14 +14,15 @@ import { ForloopcontrolComponent } from './forloopcontrol/forloopcontrol.compone
 import { SignalsComponent } from './signals/signals.component';
 import { SignalsdatatypesComponent } from './signalsdatatypes/signalsdatatypes.component';
 import { ComputedComponent } from './computed/computed.component';
+import { EffecttutorialComponent } from './effecttutorial/effecttutorial.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [NgFor, DatatableComponent, RouterOutlet, LoginComponent, SignupComponent
+  imports: [NgFor, DatatableComponent, LoginComponent, SignupComponent
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
-, ComputedComponent],
+, ComputedComponent, EffecttutorialComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

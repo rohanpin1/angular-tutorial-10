@@ -1,0 +1,8 @@
+<p>effecttutorial works!</p>
+
+@if(displayUsername){
+
+    <h1>{{username()}}</h1>
+}
+
+<button (click)="displayUsernameValue()">{{displayUsername == true ? 'Hide User Name' : 'Show User name'}}</button>
