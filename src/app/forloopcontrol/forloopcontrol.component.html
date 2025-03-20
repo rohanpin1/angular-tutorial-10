@@ -1,0 +1,23 @@
+<p>forloopcontrol works!</p>
+
+@for(item of users;track item){
+    <h2>{{item}}</h2>
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(student of students; track students){
+            <tr>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

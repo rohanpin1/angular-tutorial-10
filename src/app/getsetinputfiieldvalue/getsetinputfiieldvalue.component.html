@@ -1,0 +1,7 @@
+<p>getsetinputfiieldvalue works!</p>
+
+<span>{{name}}</span>
+<input type="text" class="field1" (input)="getInput($event)">
+<input type="text" class="field2" #secondField>
+
+<button (click)="getValue(secondField.value)">Get</button>
