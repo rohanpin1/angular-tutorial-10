@@ -21,6 +21,7 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
 
 @Component({
@@ -29,7 +30,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
-DynamicStylingComponent, DirectivesComponent, RouterLink, RouterOutlet],
+DynamicStylingComponent, DirectivesComponent, RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
