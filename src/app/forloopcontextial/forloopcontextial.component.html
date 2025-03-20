@@ -1,0 +1,37 @@
+<p>forloopcontextial works!</p>
+
+@for(user of users; track user){
+    <p>{{$index+1}}. {{user}} is my Friend.</p>
+}
+
+
+Or 
+
+
+@for(user of users; track user; let i = $index){
+    <p>{{i+1}}. {{user}} is my friend.</p>
+
+    @if($first){
+        <p style="color: red;">{{user}} is my best friend.</p>
+    }
+
+    @if($last){
+        <p style="color: blue;">{{user}} is my best friend.</p>
+    }
+
+    @if($odd){
+        <p style="color: green;">{{i+1}}. {{user}} is my best friend. (odd)</p>
+    }
+
+    @if($even){
+        <p style="color: pink;">{{i+1}}. {{user}} is my best friend. (even)</p>
+    }
+
+    <p>My total resuls is {{$count}}</p>   
+
+    
+}
+@empty() {
+    <p>Result is empty</p>
+}
+
