@@ -1,0 +1,21 @@
+<p>reactive-form-validation works!</p>
+<form [formGroup]="profileForms" (ngSubmit)="formSubmit()">
+    <div>
+        <input type="text" formControlName="name" placeholder="Name">
+        <span *ngIf="name?.hasError('required')">Name is Required</span>
+        <span *ngIf="name?.invalid && (name?.dirty || name?.touched)">Please enter User's Name</span>
+        <br/>
+        <br/>
+        <input type="text" formControlName="email" placeholder="Email">
+        <span *ngIf="email?.hasError('required')">Email is Required</span>
+        <span *ngIf="email?.invalid && (email?.dirty || email?.touched)">Please enter User's Email</span>
+        <br/>
+        <br/>
+        <input type="text" formControlName="password" placeholder="Password">
+        <span *ngIf="password?.hasError('required')">Password is Required</span>
+        <span *ngIf="password?.invalid && (password?.dirty || password?.touched)">Please enter User's Password</span>
+        <br/>
+        <br/>
+        <button>Submit</button>
+    </div>
+</form>

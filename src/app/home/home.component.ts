@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { ReactiveFormBasicComponent } from '../reactive-form-basic/reactive-form-basic.component';
 import { FormGroupingReactiveFormComponent } from '../form-grouping-reactive-form/form-grouping-reactive-form.component';
+import { ReactiveFormValidationComponent } from '../reactive-form-validation/reactive-form-validation.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, ReactiveFormBasicComponent,FormGroupingReactiveFormComponent],
+  imports: [RouterLink, ReactiveFormBasicComponent,FormGroupingReactiveFormComponent, ReactiveFormValidationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
