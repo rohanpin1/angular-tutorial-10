@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { WildcardroutingComponent } from './wildcardrouting/wildcardrouting.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { UserComponent } from './user/user.component';
+import { TemplateFormPageComponent } from './template-form-page/template-form-page.component';
 
 export const routes: Routes = [
     {path:'about',component:AboutComponent},
@@ -14,6 +15,7 @@ export const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'profiles', component:ProfilesComponent},
     {path:'user/:id/:name',component:UserComponent},
+    {path:'templatepage',component:TemplateFormPageComponent},
     {path:'**', component:WildcardroutingComponent} //double ** is used to call the wilcard entry routing
 ];
 

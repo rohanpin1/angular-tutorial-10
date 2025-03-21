@@ -1,0 +1,16 @@
+<p>Template Form Basics!</p>
+<form #userForm = "ngForm"(ngSubmit)="addDetails(userForm.value)">
+    <input type="text" placeholder="Name" name="name" ngModel>
+    <br/><br/>
+    <input type="password" placeholder="Password" name="password"ngModel>
+    <br/><br/>
+    <select name="gender" ngModel>
+        <option value="">Select Gender</option>
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+    </select>
+    <br/><br/>
+    <input type="range" min="0" max="100" name="range" ngModel>
+    <br/>
+    <button >Submit</button>
+</form>
