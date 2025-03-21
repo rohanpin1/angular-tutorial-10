@@ -1,0 +1,24 @@
+<p>form-grouping-reactive-form works!</p>
+
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Name" formControlName = 'name'>
+    <br/>
+    <br/>
+    <input type="password" placeholder="Password" formControlName = 'password'>
+    <br/>
+    <br/>
+    <input type="text" placeholder="Email" formControlName="email">
+    <br/>
+    <br/>
+    <button>Submit</button>
+    <button type="button" (click)="setValue()">Set Value</button>
+</form>
+
+@if(isShow){
+    <div>
+        <p>Name is {{name}}</p>
+        <p>Password is {{password}}</p>
+        <p>Email is {{email}}</p>
+    </div>
+}
