@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { ReactiveFormBasicComponent } from '../reactive-form-basic/reactive-form-basic.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, ReactiveFormBasicComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
