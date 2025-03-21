@@ -23,6 +23,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { TemperatureComponent } from './temperature/temperature.component';
+import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
 
 
 @Component({
@@ -31,7 +32,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
-DynamicStylingComponent, DirectivesComponent, RouterOutlet, HeaderComponent, TemperatureComponent],
+DynamicStylingComponent, DirectivesComponent, RouterOutlet, HeaderComponent, TemperatureComponent,ParentToChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -42,8 +43,11 @@ export class AppComponent {
     {link : "https://rrohankumawat.github.io/portfolio"},{link : "https://rrohankumawat.github.io/portfolio"}
   ];
   formHeader = 'Registration form';
-
-  
+  userName ='Rohan Kumawat'
+  userNames = ['rohan','raj','sohel','rajveer','pankaj']
+  selectedUser(name:string){
+    this.userName = name
+  }
 }
 
 
