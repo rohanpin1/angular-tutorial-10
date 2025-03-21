@@ -1,16 +1,25 @@
 <p>Template Form Basics!</p>
 <form #userForm = "ngForm"(ngSubmit)="addDetails(userForm.value)">
-    <input type="text" placeholder="Name" name="name" ngModel>
+    <input #name="ngModel" type="text" required placeholder="Name" name="name" ngModel>
+    <span *ngIf="name.invalid && name.touched">Name is Required</span>
     <br/><br/>
-    <input type="password" placeholder="Password" name="password"ngModel>
+    <input type="password" #password="ngModel" minlength="5" maxlength="10" placeholder="Password" name="password"ngModel>
+    <span *ngIf="password.invalid && password.touched">Password is Required</span>
     <br/><br/>
-    <select name="gender" ngModel>
+    <input type="text" #email="ngModel" email placeholder="Email" name="email"ngModel>
+    <span *ngIf="email.invalid && email.touched">Email` is Required</span>
+    <br/><br/>
+    <input type="text" #address="ngModel" pattern="[a-zA-Z0-9\s]+" placeholder="Address" name="address"ngModel>
+    <span *ngIf="address.invalid && address.touched">Address` is Required</span>
+    <br/><br/>
+    <select #gender="ngModel" name="gender" ngModel>
         <option value="">Select Gender</option>
         <option value="m">Male</option>
         <option value="f">Female</option>
     </select>
+    <span *ngIf="gender.invalid && gender.touched">Gender` is Required</span>
     <br/><br/>
     <input type="range" min="0" max="100" name="range" ngModel>
     <br/>
-    <button >Submit</button>
+    <button [disabled]="userForm.invalid">Submit</button>
 </form>
