@@ -8,6 +8,11 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  users=[
+    {id:crypto.randomUUID(),name:'rohan',age:'24',email:'rohan@gmail.com'},
+    {id:crypto.randomUUID(),name:'aryan',age:'24',email:'aryan@gmail.com'},
+    {id:crypto.randomUUID(),name:'anil',age:'24',email:'anil@gmail.com'},
+  ]
   constructor(private router:Router){
 
   }
