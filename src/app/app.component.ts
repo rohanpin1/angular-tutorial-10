@@ -25,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
 import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 @Component({
@@ -34,7 +35,7 @@ import { ChildToParentComponent } from './child-to-parent/child-to-parent.compon
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
 DynamicStylingComponent, DirectivesComponent, RouterOutlet, 
-HeaderComponent, TemperatureComponent,ParentToChildComponent, ChildToParentComponent],
+HeaderComponent, TemperatureComponent,ParentToChildComponent, ChildToParentComponent,PipesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -56,6 +57,9 @@ export class AppComponent {
     console.log(users)
     this.users = users
   }
+
+
+  
 
 }
 
