@@ -24,6 +24,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
+import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
 
 
 @Component({
@@ -32,7 +33,8 @@ import { ParentToChildComponent } from './parent-to-child/parent-to-child.compon
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
-DynamicStylingComponent, DirectivesComponent, RouterOutlet, HeaderComponent, TemperatureComponent,ParentToChildComponent],
+DynamicStylingComponent, DirectivesComponent, RouterOutlet, 
+HeaderComponent, TemperatureComponent,ParentToChildComponent, ChildToParentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -48,6 +50,13 @@ export class AppComponent {
   selectedUser(name:string){
     this.userName = name
   }
+  users:string[]|undefined  
+
+  handleUsers(users:string[]){
+    console.log(users)
+    this.users = users
+  }
+
 }
 
 
