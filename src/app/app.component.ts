@@ -26,6 +26,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
 import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
 import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { CurrencyConverterPipe } from './custom-pipes/currency-converter.pipe';
 
 
 @Component({
@@ -35,7 +36,8 @@ import { PipesComponent } from './pipes/pipes.component';
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
 DynamicStylingComponent, DirectivesComponent, RouterOutlet, 
-HeaderComponent, TemperatureComponent,ParentToChildComponent, ChildToParentComponent,PipesComponent],
+HeaderComponent, TemperatureComponent,ParentToChildComponent, ChildToParentComponent,PipesComponent
+,CurrencyConverterPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -58,7 +60,7 @@ export class AppComponent {
     this.users = users
   }
 
-
+  amount = 10
   
 
 }
