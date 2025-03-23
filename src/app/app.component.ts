@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { afterNextRender, afterRender, Component, ViewChild, viewChild } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
 import { DatatableComponent } from "./feature/datatable.component"; // ✅ Import NgFor
 
 import { LoginComponent } from './login/login.component';
@@ -27,17 +27,19 @@ import { ParentToChildComponent } from './parent-to-child/parent-to-child.compon
 import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { CurrencyConverterPipe } from './custom-pipes/currency-converter.pipe';
+import { UserLifeCycleComponent } from './user-life-cycle/user-life-cycle.component';
+import { ProductService } from './services/product.service';
 
 
 @Component({
   selector: 'app-root',
-  imports: [NgFor, DatatableComponent, LoginComponent, SignupComponent
+  imports: [NgFor,NgIf, DatatableComponent, LoginComponent, SignupComponent
     , ProfileComponent, CounterComponent, GetsetinputfiieldvalueComponent, ControlflowComponent,
   ElseifcontrolComponent, SwitchcontrolComponent, ForloopcontrolComponent, SignalsComponent, SignalsdatatypesComponent
 , ComputedComponent, EffecttutorialComponent, ForloopcontextialComponent, TwowaybindComponent,TodolistComponent,
 DynamicStylingComponent, DirectivesComponent, RouterOutlet, 
 HeaderComponent, TemperatureComponent,ParentToChildComponent, ChildToParentComponent,PipesComponent
-,CurrencyConverterPipe],
+,CurrencyConverterPipe, UserLifeCycleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -61,7 +63,38 @@ export class AppComponent {
   }
 
   amount = 10
-  
+  count = 0
+  updateCounter(){
+    this.count ++;
+  }
+
+  @ViewChild('user') UserLifeCycleComponent:any
+
+  constructor(private productService:ProductService){
+    afterRender(()=>{
+      console.log("afterRender",this.UserLifeCycleComponent.count)
+    })
+
+    afterNextRender(()=>{  //called once only
+      
+        console.log("back again")
+      
+    })
+
+   
+  }
+
+  product:{
+    name: string;
+    brand: string;
+    price: string;
+}[] | undefined
+
+  getProductData(){
+    this.product= this.productService.getProductData()
+    console.log(this.product);
+    
+  }
 
 }
 
