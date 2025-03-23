@@ -29,6 +29,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CurrencyConverterPipe } from './custom-pipes/currency-converter.pipe';
 import { UserLifeCycleComponent } from './user-life-cycle/user-life-cycle.component';
 import { ProductService } from './services/product.service';
+import { ApiCallService } from './services/api-call.service';
 
 
 @Component({
@@ -70,7 +71,7 @@ export class AppComponent {
 
   @ViewChild('user') UserLifeCycleComponent:any
 
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService, private apiService:ApiCallService){
     afterRender(()=>{
       console.log("afterRender",this.UserLifeCycleComponent.count)
     })
@@ -94,6 +95,26 @@ export class AppComponent {
     this.product= this.productService.getProductData()
     console.log(this.product);
     
+  }
+
+  // productList:{
+  //   id:string,
+  //   name:string,
+  //   description:string,
+  //   price:string,
+  //   category:string,
+  //   stock:string,
+  //   rating:string
+  // }[] | undefined
+
+  productList:any 
+
+  
+  getProductss(){
+    this.apiService.getProducts().subscribe((x:any)=>{
+      this.productList = x
+      console.log(this.productList)
+    })
   }
 
 }
