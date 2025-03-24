@@ -1,0 +1,35 @@
+*************  how to chage root component?   *********
+
+1. go to main.ts ---> chage the root component
+2. then, go to index.html and replace the <app-root> with your component select <>
+
+
+
+************  How to load 2 css files in a component ***********
+
+1. go to your component ts files
+2. then, you will find 
+
+
+styleUrl: './app.component.scss'
+
+
+
+3. Change the property styleUrl to styleUrls and mention the css file in the array 
+
+styleUrls : ['', '']
+
+
+
+
+
+*****************  What is directives? *****************
+
+directives is a class that adds additional behavior to elements in your application and this feature provides 
+more power to DOM
+
+if-else, else-if, ngStyle, ngSwitch, ngClass
+
+1. component
+2. Structural
+3. attribute
