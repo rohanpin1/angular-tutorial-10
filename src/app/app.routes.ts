@@ -8,6 +8,8 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { UserComponent } from './user/user.component';
 import { TemplateFormPageComponent } from './template-form-page/template-form-page.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 export const routes: Routes = [
     {path:'about',component:AboutComponent},
@@ -20,6 +22,7 @@ export const routes: Routes = [
     {path:'templatepage',component:TemplateFormPageComponent},
     {path:'productform',component:ProductFormComponent},
     {path:'productform/:data',component:ProductFormComponent},
+    {path:'admin',loadComponent:()=>import('./admin/admin.component').then((c)=>c.AdminComponent)}, // we should lazy loading on those pages, which are less useful
     {path:'**', component:WildcardroutingComponent} //double ** is used to call the wilcard entry routing
 ];
 
