@@ -1,0 +1,29 @@
+<form #productForm = "ngForm"  (ngSubmit)="addProduct(productForm.value)">
+    <div>
+        <label>Product Name</label>
+        <input type="text" ngModel name="name">
+    </div>
+    <div>
+        <label>Product Category</label>
+        <input type="text" ngModel name="category">
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="text" ngModel name="price">
+    </div>
+    <div>
+        <label>Rating</label>
+        <input type="text" ngModel name="rating">
+    </div>
+    <div>
+        <label>Stock</label>
+        <input type="text" ngModel name="stock">
+    </div>
+    <div>
+        <label>Descrition</label>
+        <input type="text" ngModel name="description">
+    </div>
+    <div>
+        <input type="submit" >
+    </div>
+</form>

@@ -107,7 +107,7 @@ export class AppComponent {
   //   rating:string
   // }[] | undefined
 
-  productList:any 
+  productList:any
 
   
   getProductss(){
@@ -116,7 +116,13 @@ export class AppComponent {
       console.log(this.productList)
     })
   }
-
+  deleteRow(id:string){
+    this.apiService.deleteProducts(id).subscribe((x:any)=>{
+      if(x == '1'){
+        this.getProductss()
+      }
+    })
+  }
 }
 
 
