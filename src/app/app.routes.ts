@@ -16,8 +16,10 @@ export const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'profiles', component:ProfilesComponent},
     {path:'user/:id/:name',component:UserComponent},
+    
     {path:'templatepage',component:TemplateFormPageComponent},
     {path:'productform',component:ProductFormComponent},
+    {path:'productform/:data',component:ProductFormComponent},
     {path:'**', component:WildcardroutingComponent} //double ** is used to call the wilcard entry routing
 ];
 

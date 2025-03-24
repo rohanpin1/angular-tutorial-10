@@ -20,5 +20,8 @@ export class UserComponent {
       this.id = paramas['id']
       this.name = paramas['name']
     })
+
+
+    
   }
 }

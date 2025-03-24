@@ -20,7 +20,7 @@ import { TwowaybindComponent } from './twowaybind/twowaybind.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
@@ -30,6 +30,7 @@ import { CurrencyConverterPipe } from './custom-pipes/currency-converter.pipe';
 import { UserLifeCycleComponent } from './user-life-cycle/user-life-cycle.component';
 import { ProductService } from './services/product.service';
 import { ApiCallService } from './services/api-call.service';
+import { Products } from './interface/product';
 
 
 @Component({
@@ -71,7 +72,7 @@ export class AppComponent {
 
   @ViewChild('user') UserLifeCycleComponent:any
 
-  constructor(private productService:ProductService, private apiService:ApiCallService){
+  constructor(private productService:ProductService, private apiService:ApiCallService, private route:Router){
     afterRender(()=>{
       console.log("afterRender",this.UserLifeCycleComponent.count)
     })
@@ -121,6 +122,17 @@ export class AppComponent {
       if(x == '1'){
         this.getProductss()
       }
+    })
+  }
+
+  myProduct:string | undefined;
+  selectUpdateRow(id:string){
+    console.log(id)
+    this.apiService.getSelectedUser(id).subscribe((x:Products)=>{
+      console.log(x)
+      this.myProduct = JSON.stringify(x)
+
+      this.route.navigate(['productform/'+this.myProduct])
     })
   }
 }

@@ -33,4 +33,13 @@ export class ApiCallService {
     const url = 'https://localhost:44382/api/Home/DeleteProducts'
     return this.http.delete<any>(url+"?id="+id)
   }
+
+  getSelectedUser(id:string):Observable<Products>{
+    return this.http.get<Products>('https://localhost:44382/api/Home/GetProductById?id='+id)
+  }
+
+
+  updateProduct(product:Products):Observable<any>{
+    return this.http.put('https://localhost:44382/api/Home/UpdateProduct',product)
+  }
 }
